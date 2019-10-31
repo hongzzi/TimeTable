@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+	
+<mapper namespace="sql.enrolment">
+
+	<!-- All Lecture -->
+	<select id="selectCourse" parameterType="string" resultType="course">
+	
+	</select>
+
+	<select id="searchCourse" parameterType="string" resultType="course">
+	
+	</select>
+
+	<!-- Enrolled Lecture -->
+	<insert id="insertMyCourse" parameterType="mycourse">
+	
+	</insert>
+
+	<select id="selectMyCourse" parameterType="string" resultType="mycourse">
+	
+	</select>
+	
+	<select id="selectMyCourseDetail">
+	
+	</select>
+	
+	<delete id="deleteMyCourse" parameterType="string">
+	
+	</delete>
+	
+	
+	<!-- Memo -->
+	<insert id="insertMemo" parameterType="">
+	
+	</insert>
+
+	<select id="selectMemo" parameterType="string" resultType="memo">
+	
+	</select>
+	
+	<delete id="deleteMemo" parameterType="string">
+	
+	</delete>
+	
+	
+	
+	<!-- Lecture + Memo -->
+	<resultMap type="mycourse" id="mycourseWithMemo">
+	
+	
+	
+	</resultMap>
+	
+</mapper>
