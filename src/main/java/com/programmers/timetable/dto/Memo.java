@@ -1,5 +1,8 @@
 package com.programmers.timetable.dto;
 
+import org.apache.ibatis.type.Alias;
+
+@Alias(value = "memo")
 public class Memo {
 	private int mNum;
 	private int cNum;

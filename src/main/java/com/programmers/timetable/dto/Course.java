@@ -1,5 +1,8 @@
 package com.programmers.timetable.dto;
 
+import org.apache.ibatis.type.Alias;
+
+@Alias(value = "course")
 public class Course {
 	private String code;
 	private String lecture;

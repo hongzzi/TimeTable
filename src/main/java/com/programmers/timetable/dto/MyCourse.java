@@ -2,7 +2,10 @@ package com.programmers.timetable.dto;
 
 import java.util.List;
 
+import org.apache.ibatis.type.Alias;
+
 // Enrolled Lectures
+@Alias(value = "mycourse")
 public class MyCourse {
 	private int cNum;
 	private String code;

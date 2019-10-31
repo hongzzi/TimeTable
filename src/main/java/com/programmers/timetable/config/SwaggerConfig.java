@@ -27,8 +27,8 @@ public class SwaggerConfig {
 	
 	private ApiInfo metadata() {
 		return new ApiInfoBuilder()
-				.title("Time table System for WinterCoding2019")
-				.description("tt by swagger")
+				.title("TimetableSystem for WinterCoding2019")
+				.description("tts by swagger")
 				.version("1.0")
 				.build();
 	}
