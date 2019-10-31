@@ -12,6 +12,10 @@ function list() {
 				$(".list-lecture").empty();
 				$.each(data, function(idx, item) {
 					let dayofweek = item.dayofweek.split("");
+					let dayStr = "";
+					dayofweek.split("").forEach((day)=>{
+						res+="("+day
+					})
 					let uri = "http://localhost:5000/timetable/rest/courses/detail/";
 					let $li = $("<li class='card-lecture'>");
 					$li.append("<li class='card-lecture'> <a class='lecture-title' href="+uri+item.code+">"+item.lecture+"</a>");
