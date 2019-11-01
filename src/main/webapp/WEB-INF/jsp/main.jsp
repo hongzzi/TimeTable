@@ -5,10 +5,13 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
-</head>
 <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"></link>
 <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"></link>
 <link type="text/css" rel="stylesheet" href="/css/app.css"></link>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
 <body>
 	<div class="container-lecture">
 		<section class="header">
@@ -19,7 +22,6 @@
 				<input type="text" placeholder="강의 검색" class="form-control">
 				<span><i class="material-icons ic-search">search</i></span>
 			</form>
-
 			<ul class="list-lecture">
 			</ul>
 		</section>
@@ -370,13 +372,9 @@
 		<button type="button" class="btn btn-primary btn-save">등록</button>
 	</div>
 
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="/js/app.js"></script>
-
 </body>
 
+
+<script src="/js/app.js"></script>
 
 </html>
