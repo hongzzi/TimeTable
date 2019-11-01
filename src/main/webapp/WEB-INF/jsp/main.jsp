@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -265,11 +265,11 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<h3 class="lecture-title">웹 프로그래밍</h3>
+					<h3 class="lecture-title"> ${lecture.title} </h3>
 					<ul class="lecture-info">
 						<li class="lecture-time"><i
 							class="material-icons ic-lecture-info">access_alarm</i> <span>강의
-								시간 : 09:00 - 10:50 | (월), (수)</span></li>
+								시간 : 0${lecture.start_time}:00 - ${lecture.end_time-1}:50 | (월), (수)</span></li>
 						<li class="lecture-code"><i
 							class="material-icons ic-lecture-info">code</i> <span>교과목
 								코드 : A0000001</span></li>
