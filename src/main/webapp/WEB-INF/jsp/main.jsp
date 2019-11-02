@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -256,42 +255,21 @@
 
 	<div class="modal fade" id="modal-lecture-info" role="dialog"
 		aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"
-						aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<h3 class="lecture-title"> ${lecture.title} </h3>
-					<ul class="lecture-info">
-						<li class="lecture-time"><i
-							class="material-icons ic-lecture-info">access_alarm</i> <span>강의
-								시간 : 0${lecture.start_time}:00 - ${lecture.end_time-1}:50 | (월), (수)</span></li>
-						<li class="lecture-code"><i
-							class="material-icons ic-lecture-info">code</i> <span>교과목
-								코드 : A0000001</span></li>
-						<li class="lecture-code"><i
-							class="material-icons ic-lecture-info">school</i> <span>담당
-								교수 : 김진수</span></li>
-						<li class="lecture-code"><i
-							class="material-icons ic-lecture-info">business</i> <span>강의실
-								: 공학관 204</span></li>
-					</ul>
-					<div class="lecture-description">
-						<p class="txt-description">본 강의에서는 JSP를 이용한 웹 기반 프로그래밍 기초 및
-							응용기술에 대해 학습합니다. 특히 실습 위주의 수업으로 프로그래밍 스킬 향상 및 실무 능력을 갖출 수 있도록 합니다.
-						</p>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-light" data-dismiss="modal">취소</button>
-					<button type="button" class="btn btn-primary">과목 등록하기</button>
-				</div>
-			</div>
+			<div class="modal-dialog" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">×</span>
+			</button>
 		</div>
+		<div class="modal-body">
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-light" data-dismiss="modal">취소</button>
+			<button type="button" class="btn btn-primary">과목 등록하기</button>
+		</div>
+	</div>
+</div>
 	</div>
 
 	<div class="modal fade" id="modal-lecture-task" role="dialog"
