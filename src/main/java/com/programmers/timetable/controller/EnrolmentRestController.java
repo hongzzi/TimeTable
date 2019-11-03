@@ -33,43 +33,39 @@ public class EnrolmentRestController {
 	EnrolmentService service;
 
 	@GetMapping("/courses")
-	@ApiOperation("모든 강의 정보 반환")
 	public ResponseEntity<Map<String, Object>> initList() {
 		try {
 			List<Course> list = service.getCoursesList();
 			return response(list, HttpStatus.OK, true);
 		} catch (RuntimeException e) {
-			logger.error("조회 실패", e);
+			logger.error("read fail", e);
 			return response(e.getMessage(), HttpStatus.CONFLICT, false);
 		}
 	}
 	
 	@GetMapping("/courses/detail/{code}")
-	@ApiOperation("강의 상세 정보 반환")
 	public ResponseEntity<Map<String, Object>> courseDetail(@PathVariable String code) {
 		try {
 			Course course = service.getCourseDetail(code);
 			return response(course, HttpStatus.OK, true);
 		} catch (RuntimeException e) {
-			logger.error("조회 실패", e);
+			logger.error("read fail", e);
 			return response(e.getMessage(), HttpStatus.CONFLICT, false);
 		}
 	}
 	
 	@GetMapping("/courses/search/{keyword}")
-	@ApiOperation("강의 검색 정보 반환")
 	public ResponseEntity<Map<String, Object>> courseSearch(@PathVariable String keyword) {
 		try {
 			List<Course> list = service.getSearchList(keyword);
 			return response(list, HttpStatus.OK, true);
 		} catch (RuntimeException e) {
-			logger.error("조회 실패", e);
+			logger.error("read fail", e);
 			return response(e.getMessage(), HttpStatus.CONFLICT, false);
 		}
 	}
 	
 	@PostMapping("/courses/enrol")
-	@ApiOperation("강의 수강하기")
 	public ResponseEntity<Map<String, Object>> enrolCourse(@RequestBody Course course) {
 		try {
 			String code = course.getCode();
@@ -78,31 +74,29 @@ public class EnrolmentRestController {
 			int result = service.enrolCourse(mc);
 			return response(result, HttpStatus.OK, true);
 		} catch (RuntimeException e) {
-			logger.error("수강 실패", e);
+			logger.error("enrol fail", e);
 			return response(e.getMessage(), HttpStatus.CONFLICT, false);
 		}
 	}
 	
 	@GetMapping("/courses/mycourse")
-	@ApiOperation("수강 테이블")
 	public ResponseEntity<Map<String,Object>> getMyCourse() {
 		try {
 			List<MyCourse> list = service.getMyAllCourse();
 			return response(list, HttpStatus.OK, true);
 		} catch (RuntimeException e) {
-			logger.error("getMyCourse : 불러오기 실패",e);
+			logger.error("getMyCourse : read fail",e);
 			return response(e.getMessage(), HttpStatus.CONFLICT, false);
 		}
 	}
 	
 	@DeleteMapping("/courses/mycourse/delete/{code}")
-	@ApiOperation("강의 코드로 수강목록 삭제")
 	public ResponseEntity<Map<String,Object>> removeMyCourse(@PathVariable String code) {
 		try {
 			int result = service.removeCourse(code);
 			return response(result, HttpStatus.OK, true);
 		} catch(RuntimeException e) {
-			logger.error("removeMyCourse 삭제 실패",e);
+			logger.error("removeMyCourse delete fail",e);
 			return response(e.getMessage(), HttpStatus.CONFLICT, false);
 		}
 	}
