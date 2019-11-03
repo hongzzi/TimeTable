@@ -23,15 +23,15 @@
 
 	<!-- Enrol Lecture -->
 	<insert id="enrolCourse" parameterType="mycourse">
-		insert into mycourse(code, dayofweek) values(#{code}, #{dayofweek})
+		insert into mycourse(code, dayofweek, start_time, end_time) values(#{code}, #{dayofweek}, #{startTime}, #{endTime})
 	</insert>
 	
-	<select id="selectMyCourse" parameterType="" resultType="">
-		select * from mycourse
+	<select id="selectMyCourse" resultType="mycourse">
+		select * from mycourse join courses using(code)
 	</select>
 	
-	<delete id="removeMyCourse">
-		delete from mycourse where c_num = #{c_num}
+	<delete id="removeMyCourse" parameterType="string">
+		delete from mycourse where code = #{code}
 	</delete>
 	
 	

@@ -15,13 +15,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.programmers.timetable.dto.Course;
+import com.programmers.timetable.dto.MyCourse;
 import com.programmers.timetable.repo.EnrolmentRepo;
 import com.programmers.timetable.service.EnrolmentService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Transactional
 public class TimeTableApplicationTests {
 
 	private static Logger logger = LoggerFactory.getLogger(TimeTableApplicationTests.class);
@@ -52,6 +55,25 @@ public class TimeTableApplicationTests {
 	}
 	
 	/**
+	 * MyCourses table dao Test
+	 */
+	@Test
+	public void MyCourseTest1() {
+//		int result = dao.enrolCourse(new MyCourse("PG1807-01", "¿ù", 10, 11));
+//		assertThat(result, is(1));
+	}
+	@Test
+	public void MyCourseTest2() {
+//		List<MyCourse> courses = dao.selectMyAll();
+//		assertNotNull(courses);
+	}
+	@Test
+	public void MyCourseTest3() {
+		int result = dao.deleteCourse("PG1807-01");
+		assertThat(result, is(2));
+	}
+	
+	/**
 	 * Courses table service Test
 	 */
 	@Test
@@ -69,5 +91,8 @@ public class TimeTableApplicationTests {
 		List<Course> courses = service.getSearchList("¹Ú");
 		assertNotNull(courses);
 	}
+	
+	
+	
 
 }

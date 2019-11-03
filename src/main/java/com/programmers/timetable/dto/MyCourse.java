@@ -9,18 +9,51 @@ import org.apache.ibatis.type.Alias;
 public class MyCourse {
 	private int cNum;
 	private String code;
+	private String lecture;
+	private String location;
 	private String dayofweek;
+	private int startTime;
+	private int endTime;
 	private List<Memo> memoList;
 
 	public MyCourse() {
 		super();
 	}
 
-	public MyCourse(int cNum, String code, String dayofweek) {
+	public MyCourse(String code, String dayofweek, int startTime, int endTime) {
+		super();
+		this.code = code;
+		this.dayofweek = dayofweek;
+		this.startTime = startTime;
+		this.endTime = endTime;
+	}
+
+	public MyCourse(int cNum, String code, String lecture, String location, String dayofweek, int startTime,
+			int endTime) {
 		super();
 		this.cNum = cNum;
 		this.code = code;
+		this.lecture = lecture;
+		this.location = location;
 		this.dayofweek = dayofweek;
+		this.startTime = startTime;
+		this.endTime = endTime;
+	}
+
+	public String getLecture() {
+		return lecture;
+	}
+
+	public void setLecture(String lecture) {
+		this.lecture = lecture;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
 	}
 
 	public int getcNum() {
@@ -47,6 +80,22 @@ public class MyCourse {
 		this.dayofweek = dayofweek;
 	}
 
+	public int getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(int startTime) {
+		this.startTime = startTime;
+	}
+
+	public int getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(int endTime) {
+		this.endTime = endTime;
+	}
+
 	public List<Memo> getMemoList() {
 		return memoList;
 	}
@@ -54,5 +103,5 @@ public class MyCourse {
 	public void setMemoList(List<Memo> memoList) {
 		this.memoList = memoList;
 	}
-	
+
 }
