@@ -15,8 +15,9 @@ CREATE TABLE Courses (
 CREATE TABLE MyCourse (
 	c_num int(100) NOT NULL AUTO_INCREMENT,
 	code VARCHAR(9) NOT NULL,
-    -- 날짜정렬
-    dayofweek VARCHAR(2) NOT NULL, 
+	dayofweek VARCHAR(2) NOT NULL,
+	start_time int(2) NOT NULL,
+	end_time int(2) NOT NULL, 
 	PRIMARY KEY (c_num),
 	FOREIGN KEY (code) REFERENCES Courses (code)
 ) DEFAULT CHARSET=utf8mb4;
@@ -27,5 +28,5 @@ CREATE TABLE Memo (
     title VARCHAR(20) NOT NULL,
     content VARCHAR(100) NOT NULL,
     PRIMARY KEY (m_num),
-    FOREIGN KEY (c_num) REFERENCES MyCourse (c_num)
+    FOREIGN KEY courses(c_num) REFERENCES MyCourse (c_num)
 ) DEFAULT CHARSET=utf8mb4;
