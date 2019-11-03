@@ -46,11 +46,11 @@ public class TimeTableApplicationTests {
 	@Test
 	public void CourseTest2() {
 		Course course = dao.selectOne("PG1807-01");
-		assertThat(course.getProfessor(), is("±è¿µ¼ø"));
+		assertThat(course.getProfessor(), is(""));
 	}
 	@Test
 	public void CourseTest3() {
-		List<Course> courses = dao.selectSearch("¹Ú");
+		List<Course> courses = dao.selectSearch("");
 		assertNotNull(courses);
 	}
 	
@@ -59,7 +59,7 @@ public class TimeTableApplicationTests {
 	 */
 	@Test
 	public void MyCourseTest1() {
-//		int result = dao.enrolCourse(new MyCourse("PG1807-01", "¿ù", 10, 11));
+//		int result = dao.enrolCourse(new MyCourse("PG1807-01", "", 10, 11));
 //		assertThat(result, is(1));
 	}
 	@Test
@@ -84,11 +84,11 @@ public class TimeTableApplicationTests {
 	@Test
 	public void CourseTestS2() {
 		Course course = service.getCourseDetail("PG1807-01");
-		assertThat(course.getProfessor(), is("±è¿µ¼ø"));
+		assertThat(course.getProfessor(), is(""));
 	}
 	@Test
 	public void CourseTestS3() {
-		List<Course> courses = service.getSearchList("¹Ú");
+		List<Course> courses = service.getSearchList("");
 		assertNotNull(courses);
 	}
 	

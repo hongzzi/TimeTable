@@ -12,6 +12,7 @@ public interface EnrolmentService {
 	List<Course> getSearchList(String keyword);
 
 	int enrolCourse(MyCourse mc);
+	List<MyCourse> checkTable(Course c);
 	List<MyCourse> getMyAllCourse();
 	int removeCourse(String code);
 }

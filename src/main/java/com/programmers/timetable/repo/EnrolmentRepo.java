@@ -14,6 +14,7 @@ public interface EnrolmentRepo {
 	List<Course> selectSearch(String keyword);
 
 	int enrolCourse(MyCourse mc);
+	List<MyCourse> checkTable(Course c);
 	List<MyCourse> selectMyAll();
 	int deleteCourse(String code);
 }

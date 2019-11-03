@@ -27,7 +27,7 @@
 	</insert>
 	
 	<select id="selectMyCourse" resultType="mycourse">
-		select * from mycourse join courses using(code)
+		select * from mycourse as m join courses as c using(code)
 	</select>
 	
 	<delete id="removeMyCourse" parameterType="string">

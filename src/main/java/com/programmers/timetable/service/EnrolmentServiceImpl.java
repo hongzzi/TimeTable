@@ -59,4 +59,9 @@ public class EnrolmentServiceImpl implements EnrolmentService{
 		return repo.deleteCourse(code);
 	}
 
+	@Override
+	public List<MyCourse> checkTable(Course c) {
+		return repo.checkTable(c);
+	}
+
 }
