@@ -21,5 +21,32 @@
 		</choose>
 	</select>
 
+	<!-- Enrol Lecture -->
+	<insert id="enrolCourse" parameterType="mycourse">
+		insert into mycourse(code, dayofweek) values(#{code}, #{dayofweek})
+	</insert>
+	
+	<select id="selectMyCourse" parameterType="" resultType="">
+		select * from mycourse
+	</select>
+	
+	<delete id="removeMyCourse">
+		delete from mycourse where c_num = #{c_num}
+	</delete>
+	
+	
+	<!-- Memo -->
+	<insert id="addMemo" parameterType="memo">
+		insert into memo(c_num, title, content) values(#{c_num}, #{title}, #{content])
+	</insert>
+
+	<select id="getMemo" parameterType="int" resultType="memo">
+		select * from memo where c_num = #{c_num}	
+	</select>
+	
+	<delete id="removeMemo" parameterType="int">
+		delete from memo where m_num = #{m_num}
+	</delete>
+
 
 </mapper>

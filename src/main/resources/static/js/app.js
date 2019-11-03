@@ -111,7 +111,6 @@ $(document).on("click", ".card-lecture", function() {
 		}
 	})
 	$('#modal-lecture-info').modal('show');
-	
 })
 
 $('.lecture-time > a').click(function() {
